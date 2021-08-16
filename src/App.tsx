@@ -66,7 +66,7 @@ function App() {
 
   const connectSocket = async () => {
     const socket = await socketService
-      .connect("https://assraftictactoeserver.azurewebsites.net")
+      .connect("https://servertictactoe.azurewebsites.net/")
       .catch((err: any) => {
         console.log("Error: ", err);
       });
