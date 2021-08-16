@@ -46,7 +46,7 @@ class Login extends Component <{}, { userName: string ,Password: string ,}> {
             Password: this.state.Password
         }
 
-        axios.post('http://localhost:9000/signin', registered)//change the url to azure post signin
+        axios.post('https://assraftictactoeserver.azurewebsites.net', registered)//change the url to azure post signin
             .then(res => this.errormsg = (res.data.message))
         localStorage.setItem('registeredKey', registered.userName)
         this.setState({
