@@ -18,13 +18,12 @@ const GameContainer = styled.div`
   flex-direction: column;
   font-family: "Arial", cursive;
   position: relative;
-  background-color: #25D366;
+  
 `;
 const RowContainer = styled.div`
   width: 100%;
   display: flex;
-  background-image: url("https://png.pngtree.com/png-clipart/20190516/original/pngtree-cartoon-cute-yellow-rectangle-white-border-bubble-box-element-png-image_4030002.jpg");
-
+  background-color: #25D366;
 `;
 const Cell = styled.div<ICellProps>`
   width: 13em;

@@ -47,7 +47,7 @@ const Messages = () => {
                 
             <SetBottom>
                 <input type="text" value={input} onChange={(e)=> setInput(e.target.value)} />
-                <button onClick={sendMessage}>SEND</button>
+                <button onClick={sendMessage}>🚀</button>
             </SetBottom>        
         </div>    
     )
