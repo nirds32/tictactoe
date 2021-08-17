@@ -11,7 +11,6 @@ const RowContainer = styled.div`
 const SetBottom = styled.div`
     position: absolute;
     bottom: 70px;
-    background-image: url("https://img-premium.flaticon.com/png/512/1309/premium/1309305.png?token=exp=1629229547~hmac=12b07edf5912639e4d8446e5a0d2db55");
 `;
 const ChatPadding = styled.div`
     padding-top: 50px;
