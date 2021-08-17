@@ -21,7 +21,7 @@ const AppContainer = styled.div`
 `;
 const WelcomeText = styled.h1`
   margin: 0;
-  color: #8e44ad;
+  color: #FF6F61;
   text-align: center;
   padding-top: 50px;
   padding-bottom: 50px;
