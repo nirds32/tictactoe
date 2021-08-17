@@ -16,7 +16,7 @@ interface ICellProps {
 const GameContainer = styled.div`
   display: flex;
   flex-direction: column;
-  font-family: "Zen Tokyo Zoo", cursive;
+  font-family: "Arial", cursive;
   position: relative;
 `;
 const RowContainer = styled.div`
