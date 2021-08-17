@@ -8,13 +8,13 @@ interface IMessages{
 
 class ChatService {
 
-  public async joinChatRoom(socket: Socket, roomId: string): Promise<boolean> {
-    return new Promise((rs, rj) => {
-      socket.emit("join_chat", { roomId });
-      socket.on("chat_joined", () => rs(true));
-      socket.on("chat_join_error", ({ error }) => rj(error));
-    });
-  }
+  // public async joinChatRoom(socket: Socket, roomId: string): Promise<boolean> {
+  //   return new Promise((rs, rj) => {
+  //     socket.emit("join_chat", { roomId });
+  //     socket.on("chat_joined", () => rs(true));
+  //     socket.on("chat_join_error", ({ error }) => rj(error));
+  //   });
+  // }
 
   public async sendMessage(socket : Socket, message: IMessages) {
     socket.emit("send_message", message);

@@ -42,8 +42,8 @@ const SideContainer = styled.div`
   padding-top: 20px;
 `;
 const Padding = styled.div`
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 `;
 const Options = styled.div`
   padding-top: 20px;
@@ -103,15 +103,15 @@ function App() {
     return (<><WelcomeText>Welcome to Tic-Tac-Toe <b>Guest</b></WelcomeText><Options><button onClick={LogIn}>Sign In</button></Options></>
     )
   }
-  const Screen = () => {
-    if (!isInRoom) {
-      return (<JoinRoom/>)   
-    } else  {
-      return(<SplitScreenContainer/>)
-    }
-  }
+  // const Screen = () => {
+  //   if (!isInRoom) {
+  //     return (<JoinRoom/>)   
+  //   } else  {
+  //     return(<Game/>)
+  //   }
+  // }
   const SplitScreenContainer = () => {
-    return(<><MainContainer><Game /></MainContainer><SideContainer><Messages /></SideContainer></>);
+    return(<><MainContainer><Game/></MainContainer><SideContainer><Messages/></SideContainer></>);
   }
 
   if (localStorage.getItem('registeredKey') === '' || localStorage.getItem('registeredKey') === null) {
@@ -124,6 +124,7 @@ function App() {
     )
   }
 
+
   return (
     <GameContext.Provider value={gameContextValue}>
       <AppContainer>
@@ -131,9 +132,12 @@ function App() {
         <WelcomeText>Welcome to Tic-Tac-Toe <b>{localStorage.getItem('registeredKey')}</b></WelcomeText>
         <Padding>
           <button onClick={LogOut}>Log Out</button>
-        </Padding>
+        </Padding>  
 
-        <Screen/>
+        <MainContainer>
+          {!isInRoom && <JoinRoom />}
+          {isInRoom && <Game />}
+        </MainContainer>
 
       </AppContainer>
     </GameContext.Provider>

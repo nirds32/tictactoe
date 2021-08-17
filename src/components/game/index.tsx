@@ -3,6 +3,7 @@ import styled from "styled-components";
 import gameContext from "../../context/gameContext";
 import gameService from "../../services/gameService";
 import socketService from "../../services/socketService";
+import Messages from "../chat";
 
 interface ICellProps {
   borderTop?: boolean;
@@ -62,6 +63,21 @@ const O = styled.span`
   &::after {
     content: "O";
   }
+`;
+const MainContainer = styled.div`
+  margin-left: 160px;
+  padding: 0px 10px;
+`;
+const SideContainer = styled.div`
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 350px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: beige;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
 `;
 
 export type IPlayMatrix = Array<Array<string | null>>;
@@ -192,6 +208,7 @@ export function Game() {
 
   return (
     <GameContainer>
+      <MainContainer>
       {!isGameStarted && (
         <h2>Waiting for Other Player to Join to Start the Game!</h2>
       )}
@@ -221,6 +238,12 @@ export function Game() {
           </RowContainer>
         );
       })}
+      </MainContainer>
+      <SideContainer>
+        <Messages/>
+      </SideContainer> 
     </GameContainer>
+
+    
   );
 }

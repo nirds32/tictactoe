@@ -57,7 +57,7 @@ class Login extends Component <{}, { userName: string ,Password: string ,}> {
 
     render() {
        
-        if ( (localStorage.getItem('registeredKey') !== null || localStorage.getItem('registeredKey') !== '')) {
+        if (this.errormsg === '' && (localStorage.getItem('registeredKey') !== null || localStorage.getItem('registeredKey') !== '')) {
             if (localStorage.getItem('registeredKey')!.length > 5) {
                 console.log(localStorage.getItem('registeredKey'))
                 ReactDOM.render(<App />, document.getElementById('root'))
