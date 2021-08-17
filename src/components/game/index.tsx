@@ -23,7 +23,6 @@ const GameContainer = styled.div`
 const RowContainer = styled.div`
   width: 100%;
   display: flex;
-  color: #25D366;
 `;
 const Cell = styled.div<ICellProps>`
   width: 13em;
