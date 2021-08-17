@@ -32,9 +32,9 @@ const Cell = styled.div<ICellProps>`
   border-radius: 20px;
   cursor: pointer;
   border-top: ${({ borderTop }) => borderTop && "3px solid #8e44ad"};
-  border-left: ${({ borderLeft }) => borderLeft && "3px solid #8e44ad"};
+  border-left: ${({ borderLeft }) => borderLeft && "3px solid #FF6F61"};
   border-bottom: ${({ borderBottom }) => borderBottom && "3px solid #8e44ad"};
-  border-right: ${({ borderRight }) => borderRight && "3px solid #8e44ad"};
+  border-right: ${({ borderRight }) => borderRight && "3px solid #FF6F61"};
   transition: all 270ms ease-in-out;
 
   &:hover {
@@ -75,7 +75,7 @@ const SideContainer = styled.div`
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  background-color: beige;
+  background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
 `;

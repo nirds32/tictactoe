@@ -82,7 +82,7 @@ class Login extends Component <{}, { userName: string ,Password: string ,}> {
                                 className='form-control form-group'
                             />
                             <div className='d-grid gap-2 col-6 mx-auto'>
-                                <input type='submit' className='btn btn-success' value='Submit/Register' />
+                                <input type='submit' className='btn btn-info' value='Submit/Register' />
                             </div>
                             <div className="text-center text-danger h4">{this.errormsg}</div>
                         </form>
